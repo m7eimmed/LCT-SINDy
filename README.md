@@ -5,12 +5,12 @@ The repository contains runnable scripts to reproduce the main numerical example
 
 ## Folder structure
 
-- 'Run_Logistic_example.m' — Logistic distributed-delay example illustrating full model identification from noisy data using the LCT–SINDy method.
-- 'Run_Hes1_mRNA_Example.m' — Hes1–mRNA distributed-delay model example.
-- 'Run_Ikeda_example.m' — Ikeda delay system example identified via an LCT (linear-chain) approximation.
-- 'Run_Figure1DiscreteSINDy.m' — Discrete-delay SINDy example using a library augmented only with a discrete delayed state (no distributed-delay approximation).
-- 'Run_Figure4LCTStability.m' — LCT stability/robustness experiment (Figure 4-style experiment).
-- 'utils/' — Helper functions (LCT chain builders, library construction, STRidge, rollouts, derivative estimation, RHS functions).
+- `Run_Logistic_example.m` — Logistic distributed-delay example illustrating full model identification from noisy data using the LCT–SINDy method.
+- `Run_Hes1_mRNA_Example.m` — Hes1–mRNA distributed-delay model example.
+- `Run_Ikeda_example.m` — Ikeda delay system example identified via an LCT (linear-chain) approximation.
+- `Run_Figure1DiscreteSINDy.m` — Discrete-delay SINDy example using a library augmented only with a discrete delayed state (no distributed-delay approximation).
+- `Run_Figure4LCTStability.m` — LCT stability/robustness experiment (Figure 4-style experiment).
+- `utils/` — Helper functions (LCT chain builders, library construction, STRidge, rollouts, derivative estimation, RHS functions).
 
 ## Requirements
 
@@ -28,26 +28,26 @@ The repository contains runnable scripts to reproduce the main numerical example
 ### Logistic example
 ```matlab
 run('Run_Logistic_example.m')
-
+```
 
 ### Ikeda example
 ```matlab
 run('Run_Ikeda_example.m')
-
-Notes:
+```
+**Notes:**
 - The Logistic and Ikeda examples use the same derivative-estimation helper function.  
 For exact reproducibility, ensure that the Savitzky–Golay window is set to (0.5/dt) when running the Ikeda example and to (2.5/dt) when running the Logistic example.  
 
 ### Hes1–mRNA example
 ```matlab
 run('Run_Hes1_mRNA_Example.m')
-
+```
 
 ### Figure-style scripts
 ```matlab
 run('Run_Figure1DiscreteSINDy.m')
 run('Run_Figure4LCTStability.m')
-
+```
 ## Reproducibility
 
 Random seeds are explicitly set inside the main scripts using `rng(...)`.
